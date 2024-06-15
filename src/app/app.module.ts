@@ -4,6 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
+import {reducers} from "./store";
+import { EffectsModule } from '@ngrx/effects';
+import {TodoEffects} from "@store/todo/todo.effects";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {ToastrModule} from "ngx-toastr";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -11,8 +17,12 @@ import { StoreModule } from '@ngrx/store';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    StoreModule.forRoot(reducers),
+    EffectsModule.forRoot([TodoEffects]),
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
