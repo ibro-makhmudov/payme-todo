@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-md-8 col-lg-6 col-xl-5 mx-auto mt-3 mt-lg-4 mt-xl-5">
+      <div class="bg-neutral-200 rounded-3 shadow-pop-up-m p-3 p-sm-4 p-md-5">
+        <div class="bg-neutral-200 rounded-3 shadow-pop-up-m p-3 p-sm-4 p-md-5">
+          <div class="logo-payme mb-4"></div>
+          <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Почта</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                minlength="8"
+                placeholder="Введите почту"
+                formControlName="email"
+              />
+              <div
+                *ngIf="signInForm.controls.email.dirty && signInForm.controls.email.hasError('required')"
+                class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Пароль</label>
+              <input
+                [type]="isPasswordVisible ? 'text' : 'password'"
+                class="form-control"
+                id="password"
+                placeholder="Введите пароль"
+                formControlName="password"
+              />
+              <div
+                *ngIf="signInForm.controls.password.dirty && signInForm.controls.password.hasError('required')"
+                class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Войти</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
