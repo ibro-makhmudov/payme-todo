@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 
 import * as TodoActions from '@store/todo/todo.actions';
 import {ToastrService} from "ngx-toastr";
-import {TodoService} from "services/todo.service";
+import {TodoService} from "../../pages/todo/todo.service";
 
 
 @Injectable()

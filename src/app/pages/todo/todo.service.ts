@@ -3,8 +3,8 @@ import { ToastrService } from 'ngx-toastr';
 
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {IResponse} from "../interfaces/response.interface";
-import {ITodo} from "../interfaces/todo.interface";
+import {IResponse} from "./interfaces/response.interface";
+import {ITodo} from "./interfaces/todo.interface";
 
 @Injectable({
   providedIn: 'root',

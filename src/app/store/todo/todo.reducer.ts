@@ -1,7 +1,7 @@
 import { createReducer, on } from '@ngrx/store';
 
 import * as TodoActions from '@store/todo/todo.actions';
-import {ITodo} from "../../interfaces/todo.interface";
+import {ITodo} from "../../pages/todo/interfaces/todo.interface";
 
 enum Status {
   pending = 'pending',
