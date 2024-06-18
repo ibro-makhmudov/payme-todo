@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --shadow-pop-up-m: 0px 16px 32px rgba(0,0,0,0.04);
+    --shadow-tile-m: 0 4px 4px 0 rgba(0,0,0,0.02);
+    --shadow-tile-l: 0 4px 8px 0 rgba(0,0,0,0.05);
+    --shadow-tile-xl: 0 4px 16px 0 rgba(0,0,0,0.08)
+}
+
+body.dark {
+    --shadow-pop-up-m: 0 16px 32px 0 rgba(0,0,0,0.3);
+    --shadow-tile-m: 0 4px 4px 0 rgba(0,0,0,0.2);
+    --shadow-tile-l: 0 4px 16px 0 rgba(0,0,0,0.2);
+    --shadow-tile-xl: 0 4px 4px 0 rgba(0,0,0,0.25)
+}
+
+.shadow-pop-up-m {
+    box-shadow: var(--shadow-pop-up-m)
+}
+
+.shadow-tile-m {
+    box-shadow: var(--shadow-tile-m)
+}
+
+.shadow-tile-l {
+    box-shadow: var(--shadow-tile-l)
+}
+
+.shadow-tile-xl {
+    box-shadow: var(--shadow-tile-xl)
+}
+
+.logo-payme {
+    background-image: url(https://cdn.payme.uz/payme-logos/logo/horizontal.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 30px;
+}
