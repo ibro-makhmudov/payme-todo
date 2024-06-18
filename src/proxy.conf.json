@@ -1,12 +1,11 @@
 {
-  "/api/*": {
-    "target": "https://joldibaev.uz/api",
+  "/api": {
+    "target": "https://joldibaev.uz",
     "secure": false,
     "changeOrigin": true,
     "logLevel": "debug",
     "pathRewrite": {
-      "^/api/auth/token/login/": "/auth/token/login/",
-      "^/api/todo/": "/todo/"
+      "^/api": "/api"
     }
   }
 }
