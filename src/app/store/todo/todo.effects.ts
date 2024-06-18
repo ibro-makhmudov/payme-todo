@@ -85,7 +85,7 @@ export class TodoEffects {
         this._todoService.updateTodo(action.id, action.todo).pipe(
           map(() => TodoActions.updateTodoSuccess({ id: action.id, todo: action.todo  })),
           tap(() => {
-            this._router.navigate([`/todos/${action.id}`]);
+            this._router.navigate([`/todos/`]);
             this._toastrService.success('Successfully updated!');
           }),
           catchError((error) =>

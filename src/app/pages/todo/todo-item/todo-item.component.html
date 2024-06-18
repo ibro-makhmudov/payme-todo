@@ -1,0 +1,15 @@
+<div
+  class="list-group-item d-flex align-items-center border-0 mb-2 rounded input-group"
+  style="background-color: #f4f6f7;"
+>
+  <input class="form-check-input me-2" type="checkbox" [checked]="todo.completed" (click)="onTodoStatus(todo)"/>
+  <!--<input type="text" class="form-control m-auto bg-transparent border-0" aria-label="Text input with checkbox" [value]="todo.title" [disabled]="false">-->
+  {{ todo.title }}
+  <div class="m-auto"></div>
+  <button class="btn btn-light m-1">
+    <i class="fa fa-edit" style="font-size:20px"></i>
+  </button>
+  <button class="btn btn-danger" (click)="onDelete(todo)">
+    <i class="fa fa-trash-o"></i>
+  </button>
+</div>
