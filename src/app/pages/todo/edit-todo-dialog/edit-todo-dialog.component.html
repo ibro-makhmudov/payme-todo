@@ -1,0 +1,29 @@
+<div
+  [ngClass]="{'show fade': opened}"
+  [ngStyle]="{'display': opened ? 'block' : 'none'}"
+  class="modal"
+  tabindex="-1"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <form
+      class="modal-content"
+      [formGroup]="editTodoForm"
+      (ngSubmit)="onEditTodo()"
+    >
+      <div
+        class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Изменить заметку</h1>
+      </div>
+      <div class="modal-body d-flex justify-content-center align-items-start mb-4">
+        <div data-mdb-input-init class="form-outline flex-fill ">
+          <input formControlName="title" type="text" class="form-control"/>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="close()">Отменить</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!editTodoForm.valid">Сохранить изменения</button>
+      </div>
+    </form>
+  </div>
+</div>
