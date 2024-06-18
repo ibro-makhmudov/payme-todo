@@ -8,4 +8,8 @@ import { RouterModule } from '@angular/router';
   imports: [RouterModule],
   standalone: true,
 })
-export class NotFoundComponent {}
+export class NotFoundComponent {
+  public back(): void {
+    history.back();
+  }
+}
