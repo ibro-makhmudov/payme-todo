@@ -8,7 +8,7 @@
 
             <form [formGroup]="createTodoForm" (ngSubmit)="onCreateTodo()" class="d-flex justify-content-center align-items-start mb-4">
               <div data-mdb-input-init class="form-outline flex-fill">
-                <input formControlName="title" type="text" id="form2" class="form-control" placeholder="Введите..." />
+                <input formControlName="title" type="text" id="form2" class="form-control" placeholder="Введите чтобы добавить..." />
               </div>
               <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-info ms-2" [disabled]="!createTodoForm.valid">Добавить</button>
             </form>
