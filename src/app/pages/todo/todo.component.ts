@@ -61,6 +61,7 @@ export class TodoComponent implements OnInit{
 
     if(this._isValidFormValue(this.createTodoForm.value)) {
       this._store.dispatch(addTodo({todo: this.createTodoForm.value}));
+      this.createTodoForm.controls.title.setValue('');
     }
   }
 
