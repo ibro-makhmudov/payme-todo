@@ -38,7 +38,7 @@ export class AuthGuard {
 
         this._toastr.info('Please, login to continue.');
 
-        return this._router.createUrlTree(['/auth']);
+        return this._router.createUrlTree(['/login']);
       }),
     );
   }
