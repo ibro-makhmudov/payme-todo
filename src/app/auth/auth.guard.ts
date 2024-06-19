@@ -2,12 +2,7 @@ import { map, Observable, take } from 'rxjs';
 import { ToastrService } from 'ngx-toastr';
 
 import { Injectable } from '@angular/core';
-import {
-  ActivatedRouteSnapshot,
-  Router,
-  RouterStateSnapshot,
-  UrlTree,
-} from '@angular/router';
+import { Router, UrlTree } from '@angular/router';
 
 import { AuthService } from '@auth/auth.service';
 
@@ -16,13 +11,10 @@ export class AuthGuard {
   public constructor(
     private _authService: AuthService,
     private _router: Router,
-    private _toastr: ToastrService,
+    private _toastrService: ToastrService,
   ) {}
 
-  canMatch(
-    route: ActivatedRouteSnapshot,
-    router: RouterStateSnapshot,
-  ):
+  canMatch():
     | boolean
     | UrlTree
     | Promise<boolean | UrlTree>
@@ -36,7 +28,7 @@ export class AuthGuard {
           return true;
         }
 
-        this._toastr.info('Please, login to continue.');
+        this._toastrService.info('Please, login to continue.');
 
         return this._router.createUrlTree(['/login']);
       }),
